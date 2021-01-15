@@ -5,7 +5,6 @@ import { Watchlist } from "./components/Watchlist";
 import { Watched } from "./components/Watched";
 import { Add } from "./components/Add";
 import "./App.css";
-// import "./lib/font-awesome/css/all.min.css";
 
 import { GlobalProvider } from "./context/GlobalState";
 
