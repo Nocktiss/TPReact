@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import HomeApi from "./components/HomeApi";
 import { Header } from "./components/Header";
 import { Watchlist } from "./components/Watchlist";
 import { Watched } from "./components/Watched";
@@ -16,6 +17,9 @@ function App() {
 
         <Switch>
           <Route exact path="/">
+            <HomeApi />
+          </Route>
+          <Route exact path="/watchlist">
             <Watchlist />
           </Route>
           <Route path="/add">
