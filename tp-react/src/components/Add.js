@@ -11,11 +11,12 @@ export const Add = () => {
     setQuery(e.target.value);
 
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+      `https://api.themoviedb.org/3/search/movie?&query=${e.target.value}&api_key=c927d084de8d6970458fa731c44a641d`
     )
       .then((res) => res.json())
       .then((data) => {
-        if (!data.errors) {
+        console.log(data);
+        if (!data.success) {
           setResults(data.results);
         } else {
           setResults([]);
