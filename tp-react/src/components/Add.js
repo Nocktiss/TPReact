@@ -37,7 +37,7 @@ export const Add = () => {
             />
           </div>
 
-          {results.length > 0 && (
+          {results && (
             <ul className="results">
               {results.map((movie) => (
                 <li key={movie.id}>
